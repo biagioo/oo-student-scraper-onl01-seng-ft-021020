@@ -7,7 +7,6 @@ class Student
 
   def initialize(student_hash)
     student_hash.collect {|key, value| self.send(("#{key}="), value)}
-    binding.pry
     @@all << self
   end
 
